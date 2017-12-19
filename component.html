@@ -1,0 +1,10 @@
+<input type="text" #max1="ngModel" name="max1" [(ngModel)]="IHDarModel.max1" appCompare min="min1" max="max1" required>
+<div *ngIf="max1.invalid && max1.dirty">
+    <p *ngIf="DarForm.hasError('appCompare', 'max1')">متن خطا</p>
+</div>
+
+<input type="text" class="form-control" #min1="ngModel" name="min1" [(ngModel)]="IHDarModel.min1" required appCompare min="min1"
+    max="max1">
+<div *ngIf="min1.invalid && min1.dirty">
+    <p *ngIf="DarForm.hasError('appCompare', 'min1')">متن خطا</p>
+</div>
